@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7212CD7727A6FC5F003DDA5A /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212CD7627A6FC5F003DDA5A /* NoteDetailViewController.swift */; };
 		72ED69B027A680CC00FD49F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED69AF27A680CC00FD49F3 /* AppDelegate.swift */; };
 		72ED69B227A680CC00FD49F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED69B127A680CC00FD49F3 /* SceneDelegate.swift */; };
-		72ED69B427A680CC00FD49F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED69B327A680CC00FD49F3 /* ViewController.swift */; };
 		72ED69B727A680CC00FD49F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72ED69B527A680CC00FD49F3 /* Main.storyboard */; };
 		72ED69B927A680CD00FD49F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72ED69B827A680CD00FD49F3 /* Assets.xcassets */; };
 		72ED69BC27A680CD00FD49F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72ED69BA27A680CD00FD49F3 /* LaunchScreen.storyboard */; };
+		72ED69C427A6845A00FD49F3 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED69C327A6845A00FD49F3 /* NotesTableViewController.swift */; };
+		72ED69C827A684D000FD49F3 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED69C727A684D000FD49F3 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7212CD7627A6FC5F003DDA5A /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		72ED69AC27A680CC00FD49F3 /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72ED69AF27A680CC00FD49F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72ED69B127A680CC00FD49F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		72ED69B327A680CC00FD49F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72ED69B627A680CC00FD49F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72ED69B827A680CD00FD49F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72ED69BB27A680CD00FD49F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72ED69BD27A680CD00FD49F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72ED69C327A6845A00FD49F3 /* NotesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewController.swift; sourceTree = "<group>"; };
+		72ED69C727A684D000FD49F3 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +62,10 @@
 			children = (
 				72ED69AF27A680CC00FD49F3 /* AppDelegate.swift */,
 				72ED69B127A680CC00FD49F3 /* SceneDelegate.swift */,
-				72ED69B327A680CC00FD49F3 /* ViewController.swift */,
 				72ED69B527A680CC00FD49F3 /* Main.storyboard */,
+				7212CD7627A6FC5F003DDA5A /* NoteDetailViewController.swift */,
+				72ED69C727A684D000FD49F3 /* Note.swift */,
+				72ED69C327A6845A00FD49F3 /* NotesTableViewController.swift */,
 				72ED69B827A680CD00FD49F3 /* Assets.xcassets */,
 				72ED69BA27A680CD00FD49F3 /* LaunchScreen.storyboard */,
 				72ED69BD27A680CD00FD49F3 /* Info.plist */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72ED69B427A680CC00FD49F3 /* ViewController.swift in Sources */,
+				72ED69C827A684D000FD49F3 /* Note.swift in Sources */,
 				72ED69B027A680CC00FD49F3 /* AppDelegate.swift in Sources */,
 				72ED69B227A680CC00FD49F3 /* SceneDelegate.swift in Sources */,
+				72ED69C427A6845A00FD49F3 /* NotesTableViewController.swift in Sources */,
+				7212CD7727A6FC5F003DDA5A /* NoteDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +225,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -292,6 +300,7 @@
 				DEVELOPMENT_TEAM = MF39BKG2D7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Заметки";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -306,7 +315,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,6 +329,7 @@
 				DEVELOPMENT_TEAM = MF39BKG2D7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Заметки";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -334,7 +344,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
