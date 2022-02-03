@@ -8,6 +8,11 @@ class NoteDetailViewController: UIViewController, UITextViewDelegate {
     
     var note: Note?
 
+    override func viewDidAppear(_ animated: Bool) {
+        guard textView.text == "" else { return }
+        textView.becomeFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,23 +67,6 @@ class NoteDetailViewController: UIViewController, UITextViewDelegate {
         textView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         textView.scrollIndicatorInsets = textView.contentInset
     }
-
-//    @objc func keyboardWillShow(notification:NSNotification) {
-//
-//        guard let userInfo = notification.userInfo else { return }
-//        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-//        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-//
-//        var contentInset:UIEdgeInsets = self.scrollView.contentInset
-//        contentInset.bottom = keyboardFrame.size.height + 20
-//        scrollView.contentInset = contentInset
-//    }
-//
-//    @objc func keyboardWillHide(notification:NSNotification) {
-//
-//        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-//        scrollView.contentInset = contentInset
-//    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "saveUnwind" else { return }

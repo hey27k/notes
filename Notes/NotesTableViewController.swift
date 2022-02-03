@@ -24,6 +24,12 @@ class NotesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if notes.count ==  0 {
+            self.tableView.setPlaceholder("Нет заметок")
+        } else {
+            self.tableView.removePlaceholder()
+        }
+        
         return notes.count
     }
 
@@ -83,4 +89,23 @@ class NotesTableViewController: UITableViewController {
         Note.saveToFile(notes: notes)
     }
 
+}
+
+// Placeholder for tableView when no data
+extension UITableView {
+    
+    func setPlaceholder(_ message: String) {
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
+        messageLabel.text = message
+        messageLabel.textAlignment = .center
+        messageLabel.textColor = .gray
+        
+        self.backgroundView = messageLabel
+        self.separatorStyle = .singleLine
+    }
+    
+    func removePlaceholder() {
+        self.backgroundView = nil
+        self.separatorStyle = .singleLine
+    }
 }
