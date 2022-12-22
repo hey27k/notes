@@ -7,8 +7,8 @@ struct Note: Codable {
     static let archiveURL = documentDirectory.appendingPathComponent("note_app").appendingPathExtension("plist")
     
     static func loadSampleNote() -> [Note] {
-        let note1 = Note(description: "Моя первая заметка в качестве примера!")
-                         
+        let note1 = Note(description: "Моя первая заметка в качестве примера")
+        
         return [note1]
     }
     

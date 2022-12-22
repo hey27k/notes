@@ -74,8 +74,8 @@ class NotesTableViewController: UITableViewController {
         guard segue.identifier == "saveUnwind",
               let sourceViewController = segue.source as? NoteDetailViewController,
               let note = sourceViewController.note else {
-                  return
-              }
+            return
+        }
         
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
             notes[selectedIndexPath.row] = note
