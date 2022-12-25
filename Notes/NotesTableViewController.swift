@@ -17,6 +17,10 @@ class NotesTableViewController: UITableViewController {
         }
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        setEditing(false, animated: true)
+    }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -24,10 +28,13 @@ class NotesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if notes.count ==  0 {
+        if notes.count == 0 {
             self.tableView.setPlaceholder("Нет заметок")
+            self.navigationItem.leftBarButtonItem?.isEnabled = false
+            setEditing(false, animated: true)
         } else {
             self.tableView.removePlaceholder()
+            self.navigationItem.leftBarButtonItem?.isEnabled = true
         }
         
         return notes.count
@@ -59,6 +66,7 @@ class NotesTableViewController: UITableViewController {
         self.editButtonItem.title = editing ? "Готово" : "Изменить"
     }
 
+    // MARK: - Navigation
     
     @IBSegueAction func showNoteDetail(_ coder: NSCoder, sender: Any?) -> NoteDetailViewController? {
         guard let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell) else { return nil }
@@ -67,8 +75,6 @@ class NotesTableViewController: UITableViewController {
         
         return NoteDetailViewController(coder: coder, note: noteEdit)
     }
-
-    // MARK: - Navigation
 
     @IBAction func unwindToNoteDetail(segue: UIStoryboardSegue) {
         guard segue.identifier == "saveUnwind",
